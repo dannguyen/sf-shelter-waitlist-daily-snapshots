@@ -1,10 +1,9 @@
 .DEFAULT_GOAL := ALL
 .PHONY : clean ALL
 
-
 ALL: wrangle
 	git add --all
-	git commit --allow-empty-message
+	git commit -m "$$(date)"
 	git push
 
 wrangle: data/wrangled/sf-shelter-waitlist.csv
