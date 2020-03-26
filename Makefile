@@ -8,7 +8,7 @@ ALL: wrangle
 
 wrangle: data/wrangled/sf-shelter-waitlist.csv
 
-data/wrangled/sf-shelter-waitlist.csv:
+data/wrangled/sf-shelter-waitlist.csv: data/collected
 	./scripts/wrangle.py
 
 clean:
