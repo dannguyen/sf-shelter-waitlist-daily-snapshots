@@ -31,10 +31,7 @@ Here's an official info brochure titled "How to Get on the 311 Shelter Reservati
 I run a local cron job that collects the data every day at 8:40PM (CST):
 
 ```
-40 20 * * * source ~/.bash_profile \
-    && cd ~/a/sf-shelter-waitlist/ \
-    && ./scripts/collect.py \
-    > /dev/null 2>&1 || true
+40 20 * * * source ~/.bash_profile && cd ~/a/sf-shelter-waitlist/ && ./scripts/collect.py > /dev/null 2>&1 || true
 ```
 
 The raw daily snapshots can be found in [data/collected](data/collected)
