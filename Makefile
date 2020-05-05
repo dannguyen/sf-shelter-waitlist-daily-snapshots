@@ -1,10 +1,13 @@
 .DEFAULT_GOAL := ALL
 .PHONY : clean ALL
 
-ALL: wrangle
+ALL: wrangle wrap
 	git add --all
 	git commit -m "$$(date)"
 	git push
+
+wrap: wrangle
+	./scripts/wrap.py
 
 wrangle: data/wrangled/sf-shelter-waitlist.csv
 
